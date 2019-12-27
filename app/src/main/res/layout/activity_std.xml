@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#7ADDD8E6"
+    android:padding="16dp"
     tools:context=".stdActivity">
 
     <LinearLayout
@@ -28,27 +30,28 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/std_name"
+                android:id="@+id/std_id"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:paddingLeft="16dp"
-                android:paddingRight="8dp"
+                android:gravity="left"
+                android:paddingRight="16dp"
                 android:text="Note Title "
                 android:textColor="#000"
-                android:textSize="16sp"
-                app:fontFamily="cursive" />
+                android:textSize="16sp" />
 
             <TextView
-                android:id="@+id/std_id"
+                android:id="@+id/std_level"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="right"
                 android:paddingRight="16dp"
-                android:text="Note Title "
-                android:textColor="#000"
-                android:textSize="16sp" />
+                android:text="TextView"
+                app:layout_constraintBottom_toTopOf="@+id/std_avg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent" />
 
         </LinearLayout>
 
@@ -74,18 +77,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/std_level" />
 
-            <TextView
-                android:id="@+id/std_level"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="right"
-                android:paddingRight="16dp"
-                android:text="TextView"
-                app:layout_constraintBottom_toTopOf="@+id/std_avg"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
 
     </LinearLayout>
@@ -99,5 +90,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_account_circle_black_24dp" />
+
+    <TextView
+        android:id="@+id/std_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="8dp"
+        android:text="Student Name"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:fontFamily="cursive"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
